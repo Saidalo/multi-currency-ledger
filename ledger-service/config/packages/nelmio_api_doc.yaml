@@ -1,0 +1,14 @@
+nelmio_api_doc:
+    documentation:
+        info:
+            title: "Multi-Currency Ledger API"
+            description: "API for managing ledgers and transactions."
+            version: "1.0.0"
+    areas:
+        path_patterns:
+            - ^/ledgers
+            - ^/transactions
+    models:
+        names:
+            - { alias: Transaction, type: App\Entity\Transaction }
+            - { alias: Ledger, type: App\Entity\Ledger }

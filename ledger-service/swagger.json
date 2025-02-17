@@ -1,0 +1,50 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Multi-Currency Ledger API",
+        "description": "API for managing ledgers and transactions.",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/ledgers": {
+            "post": {
+                "operationId": "post_app_ledger_createledger",
+                "responses": {
+                    "default": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/ledgers/balances/{ledgerId}": {
+            "get": {
+                "operationId": "get_app_ledger_getbalance",
+                "parameters": [
+                    {
+                        "name": "ledgerId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/transactions": {
+            "post": {
+                "operationId": "post_app_transaction_createtransaction",
+                "responses": {
+                    "default": {
+                        "description": ""
+                    }
+                }
+            }
+        }
+    }
+}
